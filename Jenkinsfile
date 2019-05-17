@@ -1,9 +1,11 @@
 pipeline {
-  agent { any }
+  agent any
   
-  stages{
+  stages {
     stage('Environment'){
-      sh 'env'
+      steps{
+        sh 'env'
+      }
     }
   }
 }
