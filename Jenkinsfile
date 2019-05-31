@@ -1,9 +1,11 @@
 pipeline {
-  agent kubernetes {
+  agent{
+    kubernetes {
       label 'mypod'
       defaultContainer 'jnlp'
       yamlFile 'JenkinsPod.yaml'
     }
+  }
   
   stages {
     stage('Environment'){
