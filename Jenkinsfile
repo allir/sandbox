@@ -12,7 +12,7 @@ pipeline {
       steps{
         sh 'hostname'
         sh 'env'
-        sh 'which -a mvn'
+        sh 'which -a mvn || true'
       }
     }
 
