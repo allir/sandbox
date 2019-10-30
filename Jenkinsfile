@@ -12,16 +12,14 @@ pipeline {
       steps{
         sh 'hostname'
         sh 'env'
-        sh 'which -a mvn || true'
       }
     }
 
     stage('Kubernetes Test'){
       steps{
-        container('maven'){
+        container('builder-base'){
           sh 'hostname'
           sh 'env'
-          sh 'which -a mvn'
         }
       }
     }
