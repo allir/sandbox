@@ -16,11 +16,11 @@ spec:
     - name: socket
       mountPath: /var/run/docker.sock
   - name: golang
-    image: golang:1.12
+    image: golang:1.13
     tty: true
     command:
     - cat
-  - name: nks-ci
+  - name: ci
     image: gcr.io/stackpoint-public/ci:23fb4da
     tty: true
     command:
